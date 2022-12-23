@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.searchbox{
+  box-sizing: border-box;
+  display: flex;
+  background: #FFFFFF;
+  border: 1px solid rgba(30, 30, 30, 0.69);
+}
+
+.btn{
+  font-family:'Poppins';
+  font-size: 36px;
+  color: #FFFFFF;
+}
+.btn:hover{
+  background-color: #b6053a;
+}
+
+.nav{
+  font-size: 12px;
+  /*font-family: sansationFont;*/
+  font-family: 'Poppins';
+  color: #F51055;
+  padding: 0 2rem;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.92)
+}
+.search-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+.search-wrap{
+  padding: 1rem;
+  border: 1px solid rgba(204, 204, 204, 0.92);
+  width: 60%;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+.search-wrap input{
+  border: none;
+  width: 100%;
+  outline: none;
+  color: rgba(123, 123, 123, 0.92);
+  font-size: 20px;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.search-content button{
+  transition: 0.4s;
+  margin: 1rem;
+  background-color: #F51055;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  font-size: 1.5rem;
+}
+
+.search-content h1{
+  padding: 4rem 1rem;
+  font-size: 48px;
+}
+.con{
+  margin-top: 54px;
+  margin-left: 20rem;
+}
+.content{
+  display: flex;
+  /* background-color: rgb(250, 60, 123) ; */
+  /* justify-content: ; */
+  width: 300px;
+  justify-content: space-around;
+}
+.card{
+  border: 1px solid black;
+  margin-right: 5rem;
+  margin-left: 65rem;
+}
+.card2{
+  border: 1px solid black;
+  margin-right: 5rem;
+
+}
+.card3{
+  border: 1px solid black;
+  margin-right: 5rem;
+
+}
+.card img{
+  width: 100%;
+  height: 214px;
+  object-fit: cover;
+
+}
+.card2 img{
+  width: 100%;
+  height: 214px;
+  object-fit: cover;
+}
+.card3 img{
+  width: 100%;
+  height: 214px;
+  object-fit: cover;
+}
+.card button{
+  transition: 0.4s;
+  margin: 0.8rem;
+  background-color: #F51055;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 5rem;
+  font-size: 24px;
+  color: white;
+}
+.card2 button{
+  transition: 0.4s;
+  margin: 0.8rem;
+  background-color: #F51055;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 5rem;
+  font-size: 24px;
+  color: white;
+}
+.card3 button{
+  transition: 0.4s;
+  margin: 0.8rem;
+  background-color: #F51055;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 5rem;
+  font-size: 24px;
+  color: white;
+}
+.heading{
+  font-size: larger;
+  font-weight: 700;
+  padding-left: 60px;
+}
+p{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.content .get-content .b{
+  padding-left: 75px;
+  padding-right: 75px;
+}
+.get-content{
+  border-radius: 1px solid black;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.toast{
+  background-color: #f5105548;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0rem 1rem;
+  color: #F51055;
+  justify-content: space-between;
+  height: 2.6rem;
+  margin-right: 10px;
+}
+.toast span{
+  padding-right: 10px;
+}
+
+.dishes{
+  padding: 1rem;
+}
