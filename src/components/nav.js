@@ -1,10 +1,10 @@
 import React from 'react'
 
-let nav = () => {
+let Nav = () => {
   return (
     <div className='nav'>
         <h1>TASTYPASTY</h1>
     </div>
   )
 }
-export default nav;
+export default Nav;

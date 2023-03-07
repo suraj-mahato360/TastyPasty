@@ -2,31 +2,21 @@ import React from 'react';
 // import { ReactDOM } from 'react-dom';
 
 
-let Toast = () => {
-    const [tags, setTags] = React.useState([]);
-    const removeTags = indexToRemove => {
-        setTags(tags.filter((_, index) => index !== indexToRemove));
-    };
-    const addTags = event => {
-        if(event.key=== "Enter" && event.target.value !== "") {
-            setTags([...tags, event.target.value]);
-            event.target.value = "";
-        }
-    };
+let Toast = (props) => {
     return (
         <div>
             <div className='search-content'>
                 <h1>What are you planning to make today?</h1>
                 <div className='search-wrap'>
-                    {tags.map((tag, index) => (
+                    {props.tags.map((tag, index) => (
                         <div className='toast' key={index}>
                         <span>{tag}</span>
-                        <box-icon name='x' color="#F51055" onClick={() => removeTags(index)}></box-icon>
+                        <box-icon name='x' color="#F51055" onClick={() => props.removeTags(index)}></box-icon>
                         </div>
                     ))}
-                    <input type="text" className='searchbox' placeholder='Start typing your ingredients' onKeyUp={addTags}/>
+                    <input type="text" className='searchbox' placeholder='Start typing your ingredients' onKeyUp={props.addTags}/>
                 </div>
-                <button className='btn'>Get Recipe</button>
+                <button className='btn' onClick={props.getRecipes}>Get Recipe</button>
             </div>
         </div>
     )

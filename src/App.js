@@ -1,19 +1,51 @@
 import './App.css';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import 'boxicons';
 import Nav from './components/nav';
 import Toast from './components/toast'
 import Card from './components/card';
-
+import Axios from 'axios';
 function App() {
+  
+  const [tags, setTags] = useState([]);
+  const [recipes, setRecipes] = useState([]);
+
+  const apiKey = process.env.REACT_APP_API_KEY
+
+  const searchValue = tags.join(",+")
+  console.log(searchValue)
+
+  const removeTags = indexToRemove => {
+    setTags(tags.filter((_, index) => index !== indexToRemove));
+};
+
+
+const addTags = event => {
+  if(event.key=== "Enter" && event.target.value !== "") {
+      setTags([...tags, event.target.value]);
+      event.target.value = "";
+  }
+};
+
+
+useEffect(()=>{
+  const getRecipes = async () => {
+    const res = await Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${searchValue}&apiKey=${apiKey}`)
+  
+    console.log(res)
+    setRecipes(res.data.results)
+    console.log(setRecipes)
+  }
+  getRecipes();
+}, [searchValue,apiKey]);
+
+
   return (
     <div>
       <Nav />
-      <Toast />
+      <Toast tags={tags} removeTags={removeTags} addTags={addTags} setTags={setTags}/>
       <div className="dishes">
-        <h2>Possible Recipes</h2>
-        <hr />
-        <Card />
+        <Card recipes={recipes} />
       </div>
     </div>
   );
