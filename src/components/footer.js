@@ -5,10 +5,8 @@ const Footer = () => {
     <div>
         <div className="team">
             <div className="name">
-                <span>Arvind Suthar</span>
                 <span>Suraj Mahato</span>
-                <span>Suraj Rajbhar</span>
-                <span>Sayali Nate</span>
+                <span>Arvind Suthar</span>
             </div>
             <div className="social">
                 <a href="#"><box-icon type='logo' name='linkedin-square'></box-icon></a>

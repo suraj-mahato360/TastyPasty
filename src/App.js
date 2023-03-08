@@ -33,19 +33,17 @@ useEffect(()=>{
     const res = await Axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${searchValue}&apiKey=${apiKey}`)
   
     console.log(res)
-    setRecipes(res.data.results)
-    console.log(setRecipes)
+    setRecipes(res.data)
   }
   getRecipes();
 }, [searchValue,apiKey]);
-
 
   return (
     <div>
       <Nav />
       <Toast tags={tags} removeTags={removeTags} addTags={addTags} setTags={setTags}/>
       <div className="dishes">
-        <Card recipes={recipes} />
+        <Card recipes={recipes}/>
       </div>
     </div>
   );
