@@ -21,7 +21,7 @@ function App() {
 
 
 const addTags = event => {
-  if(event.key=== "Enter" && event.target.value !== "") {
+  if((event.key=== "Enter" || event.key=== " ") && event.target.value !== "") {
       setTags([...tags, event.target.value]);
       event.target.value = "";
   }
